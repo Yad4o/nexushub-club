@@ -269,46 +269,73 @@
   </section>
 
   <!-- TEAM -->
-  <section id="team" class="section">
+  <section id="team" class="section section-dark">
     <div class="container">
       <div class="section-label">The People</div>
       <h2>Meet the <span>Team</span></h2>
       <div class="team-grid">
         <div class="team-card">
-          <div class="avatar">AK</div>
+          <div class="avatar av1">AK</div>
           <h3>Aryan Kapoor</h3>
           <p>President</p>
           <span>AI & Full-Stack</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
         </div>
         <div class="team-card">
-          <div class="avatar">SR</div>
+          <div class="avatar av2">SR</div>
           <h3>Sneha Rao</h3>
           <p>Vice President</p>
           <span>Product & Design</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
         </div>
         <div class="team-card">
-          <div class="avatar">OM</div>
+          <div class="avatar av3">OM</div>
           <h3>Om Yadao</h3>
           <p>Tech Lead</p>
           <span>Backend & AI</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
         </div>
         <div class="team-card">
-          <div class="avatar">PJ</div>
+          <div class="avatar av4">PJ</div>
           <h3>Priya Joshi</h3>
           <p>Events Head</p>
           <span>Community & Ops</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
         </div>
         <div class="team-card">
-          <div class="avatar">RV</div>
+          <div class="avatar av5">RV</div>
           <h3>Rohan Verma</h3>
           <p>Dev Lead</p>
           <span>Web & Mobile</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
         </div>
         <div class="team-card">
-          <div class="avatar">NK</div>
+          <div class="avatar av6">NK</div>
           <h3>Neha Kumar</h3>
           <p>Design Lead</p>
           <span>UI/UX & Branding</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
+        </div>
+        <div class="team-card">
+          <div class="avatar av7">KM</div>
+          <h3>Kiran Mehta</h3>
+          <p>Research Lead</p>
+          <span>ML & Data Science</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
+        </div>
+        <div class="team-card">
+          <div class="avatar av8">AS</div>
+          <h3>Aditya Sharma</h3>
+          <p>Marketing Head</p>
+          <span>Growth & Content</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
+        </div>
+        <div class="team-card">
+          <div class="avatar av9">DG</div>
+          <h3>Dev Gupta</h3>
+          <p>Sponsorship Lead</p>
+          <span>Partnerships & Finance</span>
+          <div class="team-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
         </div>
       </div>
     </div>
@@ -383,8 +410,22 @@
           <input type="text" placeholder="Your Name" required>
           <input type="email" placeholder="Your Email" required>
         </div>
-        <input type="text" placeholder="Year & Branch (e.g. 2nd Year, CS)">
-        <textarea placeholder="Why do you want to join NexusHub?" rows="4"></textarea>
+        <div class="form-row">
+          <input type="text" placeholder="Year & Branch (e.g. 2nd Year, CS)">
+          <input type="text" placeholder="GitHub / LinkedIn (optional)">
+        </div>
+        <textarea placeholder="Why do you want to join NexusHub? What do you want to build?" rows="4"></textarea>
+        <div class="interest-group">
+          <p class="interest-label">Interested in:</p>
+          <div class="interest-tags">
+            <label class="interest-tag"><input type="checkbox"> AI/ML</label>
+            <label class="interest-tag"><input type="checkbox"> Web Dev</label>
+            <label class="interest-tag"><input type="checkbox"> Mobile</label>
+            <label class="interest-tag"><input type="checkbox"> Design</label>
+            <label class="interest-tag"><input type="checkbox"> Cloud</label>
+            <label class="interest-tag"><input type="checkbox"> Research</label>
+          </div>
+        </div>
         <button type="submit" class="btn-primary">Send Application</button>
       </form>
       <div id="form-success" class="form-success" style="display:none">
@@ -393,17 +434,59 @@
     </div>
   </section>
 
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="container newsletter-inner">
+      <div>
+        <h3>Stay in the loop</h3>
+        <p>Get notified about events, workshops, and opportunities before anyone else.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    <div class="footer-inner">
-      <div class="nav-logo">NEXUS<span>HUB</span></div>
-      <p>© 2025 NexusHub. Built by students, for students.</p>
-      <div class="footer-links">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">NEXUS<span>HUB</span></div>
+        <p>Built by students, for students.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">GitHub</a>
+          <a href="#" class="footer-social-btn">LinkedIn</a>
+          <a href="#" class="footer-social-btn">Twitter</a>
+          <a href="#" class="footer-social-btn">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#team">Team</a>
       </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Learning Hub</a>
+        <a href="projects.html">Project Gallery</a>
+        <a href="#events">Workshops</a>
+        <a href="#contact">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:nexushub@college.edu">nexushub@college.edu</a>
+        <a href="#">Room 204, CS Block</a>
+        <a href="#">Mon–Fri, 4–6 PM</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NexusHub. All rights reserved.</p>
+      <p>Made with ♥ by the NexusHub team</p>
     </div>
   </footer>
 
