@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusHub — Tech & Innovation Club</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">NEXUS<span>HUB</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Join Us</a>
+      <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#events" onclick="toggleMenu()">Events</a></li>
+      <li><a href="#team" onclick="toggleMenu()">Team</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Est. 2024 · Student Tech Community</div>
+      <h1>Build. <span>Innovate.</span><br>Connect.</h1>
+      <p>NexusHub is where curious minds meet, ideas collide, and technology shapes the future. A community for builders, thinkers, and doers.</p>
+      <div class="hero-btns">
+        <a href="#events" class="btn-primary">Explore Events</a>
+        <a href="#about" class="btn-secondary">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>120+</span><p>Members</p></div>
+        <div class="stat"><span>30+</span><p>Events</p></div>
+        <div class="stat"><span>15+</span><p>Projects</p></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="grid-orb"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">Who We Are</div>
+      <h2>More than a club.<br><span>A launchpad.</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>NexusHub is a student-led tech and innovation club dedicated to fostering a culture of learning, building, and collaboration. We bring together students passionate about AI, software development, design, and entrepreneurship.</p>
+          <p>Whether you're a first-year exploring code or a final-year shipping projects — NexusHub is your community.</p>
+        </div>
+        <div class="about-cards">
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Workshops</h3>
+            <p>Hands-on sessions on AI, web dev, cloud, and more.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🏆</div>
+            <h3>Hackathons</h3>
+            <p>Compete, build, and win with your team.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🤝</div>
+            <h3>Networking</h3>
+            <p>Connect with alumni, mentors, and industry pros.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Projects</h3>
+            <p>Build real products with a team that ships.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="section section-dark">
+    <div class="container">
+      <div class="section-label">What's Happening</div>
+      <h2>Upcoming <span>Events</span></h2>
+      <div class="events-grid">
+        <div class="event-card featured">
+          <div class="event-tag">Hackathon</div>
+          <h3>NexusHack 2025</h3>
+          <p>48-hour hackathon. Any stack. Any idea. Best product wins.</p>
+          <div class="event-meta">
+            <span>📅 June 14–15, 2025</span>
+            <span>📍 Main Auditorium</span>
+          </div>
+          <a href="#contact" class="btn-primary small">Register</a>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">Workshop</div>
+          <h3>Intro to AI Agents</h3>
+          <p>Build your first multi-agent system with Python and LangChain.</p>
+          <div class="event-meta">
+            <span>📅 May 20, 2025</span>
+            <span>📍 Lab 3B</span>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">Talk</div>
+          <h3>From Campus to Startup</h3>
+          <p>Alumni panel on building products while still in college.</p>
+          <div class="event-meta">
+            <span>📅 May 28, 2025</span>
+            <span>📍 Seminar Hall</span>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">Workshop</div>
+          <h3>Full-Stack in a Day</h3>
+          <p>Ship a complete web app from scratch in one session.</p>
+          <div class="event-meta">
+            <span>📅 June 5, 2025</span>
+            <span>📍 Computer Lab</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-label">The People</div>
+      <h2>Meet the <span>Team</span></h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar">AK</div>
+          <h3>Aryan Kapoor</h3>
+          <p>President</p>
+          <span>AI & Full-Stack</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">SR</div>
+          <h3>Sneha Rao</h3>
+          <p>Vice President</p>
+          <span>Product & Design</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">OM</div>
+          <h3>Om Yadao</h3>
+          <p>Tech Lead</p>
+          <span>Backend & AI</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">PJ</div>
+          <h3>Priya Joshi</h3>
+          <p>Events Head</p>
+          <span>Community & Ops</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">RV</div>
+          <h3>Rohan Verma</h3>
+          <p>Dev Lead</p>
+          <span>Web & Mobile</span>
+        </div>
+        <div class="team-card">
+          <div class="avatar">NK</div>
+          <h3>Neha Kumar</h3>
+          <p>Design Lead</p>
+          <span>UI/UX & Branding</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container contact-container">
+      <div class="section-label">Get Involved</div>
+      <h2>Join <span>NexusHub</span></h2>
+      <p class="contact-sub">Whether you want to attend events, lead projects, or just be part of the community — we'd love to have you.</p>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <input type="text" placeholder="Year & Branch (e.g. 2nd Year, CS)">
+        <textarea placeholder="Why do you want to join NexusHub?" rows="4"></textarea>
+        <button type="submit" class="btn-primary">Send Application</button>
+      </form>
+      <div id="form-success" class="form-success" style="display:none">
+        ✅ Application received! We'll be in touch soon.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="nav-logo">NEXUS<span>HUB</span></div>
+      <p>© 2025 NexusHub. Built by students, for students.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
