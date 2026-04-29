@@ -117,6 +117,18 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .team-card p { font-size: 13px; color: var(--accent2); margin-bottom: 8px; }
 .team-card span { font-size: 12px; color: var(--text-sub); }
 
+/* TIMELINE */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent), transparent); }
+.timeline-item { position: relative; margin-bottom: 48px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot { position: absolute; left: -29px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg2); box-shadow: 0 0 12px rgba(108,99,255,0.6); }
+.timeline-upcoming .timeline-dot { background: transparent; border-color: var(--accent); animation: pulse 2s ease infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(108,99,255,0.5); } 50% { box-shadow: 0 0 0 8px rgba(108,99,255,0); } }
+.timeline-year { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.timeline-content h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.timeline-content p { font-size: 14px; color: var(--text-sub); line-height: 1.6; }
+
 /* CONTACT */
 .contact-container { max-width: 640px; text-align: center; }
 .contact-sub { color: var(--text-sub); margin-bottom: 40px; font-size: 16px; }
