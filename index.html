@@ -9,6 +9,10 @@
 </head>
 <body>
 
+  <div id="scroll-progress"></div>
+  <div id="custom-cursor"></div>
+  <div id="cursor-dot"></div>
+
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
@@ -32,23 +36,29 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
+    <canvas id="particle-canvas"></canvas>
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-badge">Est. 2024 · Student Tech Community</div>
-      <h1>Build. <span>Innovate.</span><br>Connect.</h1>
+      <h1>Build. <span class="typing-wrapper"><span id="typing-text">Innovate.</span><span class="typing-cursor">|</span></span><br>Connect.</h1>
       <p>NexusHub is where curious minds meet, ideas collide, and technology shapes the future. A community for builders, thinkers, and doers.</p>
       <div class="hero-btns">
         <a href="#events" class="btn-primary">Explore Events</a>
         <a href="#about" class="btn-secondary">Learn More</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><span>120+</span><p>Members</p></div>
-        <div class="stat"><span>30+</span><p>Events</p></div>
-        <div class="stat"><span>15+</span><p>Projects</p></div>
+        <div class="stat"><span data-count="120" data-suffix="+">0+</span><p>Members</p></div>
+        <div class="stat"><span data-count="30" data-suffix="+">0+</span><p>Events</p></div>
+        <div class="stat"><span data-count="15" data-suffix="+">0+</span><p>Projects</p></div>
+        <div class="stat"><span data-count="8" data-suffix="">0</span><p>Awards</p></div>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="grid-orb"></div>
+      <div class="grid-orb">
+        <div class="orb-ring orb-ring-1"></div>
+        <div class="orb-ring orb-ring-2"></div>
+        <div class="orb-ring orb-ring-3"></div>
+      </div>
     </div>
   </section>
 
