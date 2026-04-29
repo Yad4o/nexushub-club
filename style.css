@@ -97,16 +97,18 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .card p { font-size: 13px; color: var(--text-sub); }
 
 /* EVENTS */
-.events-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.event-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: border-color 0.2s; }
-.event-card:hover { border-color: rgba(108,99,255,0.3); }
-.event-card.featured { border-color: rgba(108,99,255,0.4); background: rgba(108,99,255,0.06); grid-column: span 2; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
+.events-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.event-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
+.event-card:hover { border-color: rgba(108,99,255,0.4); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(108,99,255,0.1); }
+.event-card.featured { border-color: rgba(108,99,255,0.4); background: rgba(108,99,255,0.06); grid-column: span 3; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
 .event-card.featured h3 { font-size: 24px; }
 .event-tag { display: inline-block; background: rgba(108,99,255,0.15); color: var(--accent2); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
 .event-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 8px; }
 .event-card p { color: var(--text-sub); font-size: 14px; margin-bottom: 16px; }
 .event-meta { display: flex; flex-direction: column; gap: 4px; }
 .event-meta span { font-size: 13px; color: var(--text-sub); }
+@media (max-width: 900px) { .events-grid { grid-template-columns: repeat(2,1fr); } .event-card.featured { grid-column: span 2; } }
+@media (max-width: 600px) { .events-grid { grid-template-columns: 1fr; } .event-card.featured { grid-column: span 1; grid-template-columns: 1fr; } }
 
 /* TEAM */
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
