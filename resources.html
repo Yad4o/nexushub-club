@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — NexusHub Learning Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="resources.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <div id="custom-cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">NEXUS<span>HUB</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#tech">Tech</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="resources.html" class="nav-active">Resources</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Join Us</a>
+      <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="index.html#contact">Join</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="res-hero">
+    <div class="res-hero-inner">
+      <div class="section-label">NexusHub Learning Hub</div>
+      <h1>Curated <span>Resources</span><br>to level you up.</h1>
+      <p>Handpicked by NexusHub members — the best learning material across AI, web development, system design, and more.</p>
+      <div class="res-search-bar">
+        <span class="res-search-icon">🔍</span>
+        <input type="text" placeholder="Search resources…" id="res-search" oninput="searchResources()">
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING PATHS -->
+  <section class="res-section">
+    <div class="container">
+      <div class="section-label">Start Here</div>
+      <h2>Learning <span>Paths</span></h2>
+      <div class="paths-grid">
+        <div class="path-card">
+          <div class="path-icon" style="background:linear-gradient(135deg,#4c1d95,#6C63FF)">🤖</div>
+          <div class="path-info">
+            <h3>AI / ML Engineer</h3>
+            <p>From Python basics to deploying production ML models. Covers math, frameworks, and real projects.</p>
+            <div class="path-meta"><span>24 resources</span><span>~3 months</span><span>Beginner → Advanced</span></div>
+          </div>
+        </div>
+        <div class="path-card">
+          <div class="path-icon" style="background:linear-gradient(135deg,#1d4ed8,#06b6d4)">🌐</div>
+          <div class="path-info">
+            <h3>Full-Stack Web Developer</h3>
+            <p>HTML to Next.js, databases, APIs, deployment. Build and ship real full-stack products.</p>
+            <div class="path-meta"><span>31 resources</span><span>~4 months</span><span>Beginner → Advanced</span></div>
+          </div>
+        </div>
+        <div class="path-card">
+          <div class="path-icon" style="background:linear-gradient(135deg,#065f46,#10b981)">📱</div>
+          <div class="path-info">
+            <h3>Mobile Developer</h3>
+            <p>React Native and Flutter tracks. Build cross-platform apps from scratch to App Store ready.</p>
+            <div class="path-meta"><span>18 resources</span><span>~2 months</span><span>Intermediate</span></div>
+          </div>
+        </div>
+        <div class="path-card">
+          <div class="path-icon" style="background:linear-gradient(135deg,#7c2d12,#f97316)">☁️</div>
+          <div class="path-info">
+            <h3>Cloud & DevOps</h3>
+            <p>AWS, Docker, Kubernetes, CI/CD pipelines. Go from local to globally deployed infrastructure.</p>
+            <div class="path-meta"><span>20 resources</span><span>~2 months</span><span>Intermediate</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES GRID -->
+  <section class="res-section res-section-dark">
+    <div class="container">
+      <div class="section-label">All Resources</div>
+      <h2>Handpicked by <span>NexusHub</span></h2>
+
+      <div class="res-tabs">
+        <button class="res-tab active" onclick="showTab('ai',this)">AI / ML</button>
+        <button class="res-tab" onclick="showTab('web',this)">Web Dev</button>
+        <button class="res-tab" onclick="showTab('cs',this)">CS Fundamentals</button>
+        <button class="res-tab" onclick="showTab('design',this)">Design</button>
+        <button class="res-tab" onclick="showTab('career',this)">Career</button>
+      </div>
+
+      <!-- AI/ML -->
+      <div class="res-tab-content active" id="tab-ai">
+        <div class="res-grid">
+          <div class="res-card" data-search="machine learning python fast.ai deep learning neural">
+            <div class="res-type course">Course</div>
+            <h4>Practical Deep Learning for Coders</h4>
+            <p>Fast.ai's legendary course. Build image classifiers, NLP models, and more — code-first approach, no fluff.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card" data-search="andrew ng machine learning coursera stanford">
+            <div class="res-type course">Course</div>
+            <h4>Machine Learning Specialization — Andrew Ng</h4>
+            <p>The classic. Supervised learning, neural networks, and ML best practices from Stanford/Coursera.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card" data-search="hugging face transformers nlp bert gpt">
+            <div class="res-type docs">Docs</div>
+            <h4>Hugging Face Transformers Course</h4>
+            <p>Official course for using pretrained models — BERT, GPT, T5. Fine-tuning, pipelines, and deployment.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card" data-search="kaggle competition data science python pandas">
+            <div class="res-type platform">Platform</div>
+            <h4>Kaggle — Competitions & Notebooks</h4>
+            <p>The best place to practice ML on real datasets. Enter competitions, study winning notebooks, learn from others.</p>
+            <div class="res-footer"><span class="res-level beginner">All Levels</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card" data-search="langchain agents llm openai rag retrieval">
+            <div class="res-type tutorial">Tutorial</div>
+            <h4>LangChain Cookbook</h4>
+            <p>Build LLM-powered apps — RAG systems, agents, memory, and tool use. The go-to reference for AI app builders.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card" data-search="neural network visualization 3blue1brown math">
+            <div class="res-type video">Video</div>
+            <h4>Neural Networks — 3Blue1Brown</h4>
+            <p>The most visually beautiful explanation of how neural networks work. Required watching for everyone in AI.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEB DEV -->
+      <div class="res-tab-content" id="tab-web">
+        <div class="res-grid">
+          <div class="res-card">
+            <div class="res-type course">Course</div>
+            <h4>The Odin Project</h4>
+            <p>Full-stack curriculum from zero to deployed app. HTML, CSS, JS, Node, React — all free and project-based.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type docs">Docs</div>
+            <h4>Next.js Official Docs</h4>
+            <p>The authoritative source on Next.js App Router, server components, and full-stack React. Read it front to back.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type tutorial">Tutorial</div>
+            <h4>Josh Comeau — CSS for JS Developers</h4>
+            <p>The best interactive course to truly understand CSS — flexbox, grid, animations, and the box model.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type video">Video</div>
+            <h4>Fireship — Web Dev in 100 Seconds</h4>
+            <p>Fast, dense, and accurate overviews of every web technology. Excellent for building your mental map.</p>
+            <div class="res-footer"><span class="res-level beginner">All Levels</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type platform">Platform</div>
+            <h4>Frontend Mentor</h4>
+            <p>Real-world UI challenges with professional designs. Build projects, get feedback, build your portfolio.</p>
+            <div class="res-footer"><span class="res-level beginner">All Levels</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type book">Book</div>
+            <h4>You Don't Know JS</h4>
+            <p>Deep dive into JavaScript's internals — scope, closures, prototypes, async. Free on GitHub. Essential reading.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS FUNDAMENTALS -->
+      <div class="res-tab-content" id="tab-cs">
+        <div class="res-grid">
+          <div class="res-card">
+            <div class="res-type course">Course</div>
+            <h4>CS50 — Harvard</h4>
+            <p>The world's most popular intro CS course. Teaches thinking like a programmer, not just syntax. Life-changing for many.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type book">Book</div>
+            <h4>Designing Data-Intensive Applications</h4>
+            <p>The bible of distributed systems and databases. Understand how real systems scale, fail, and recover.</p>
+            <div class="res-footer"><span class="res-level advanced">Advanced</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type platform">Platform</div>
+            <h4>LeetCode — DSA Practice</h4>
+            <p>The standard for interview prep. Focus on Blind 75 and NeetCode 150 for efficient preparation.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-free">Freemium</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type video">Video</div>
+            <h4>System Design Interview — Gaurav Sen</h4>
+            <p>Best YouTube channel for system design concepts. URL shorteners, ride-sharing, chat systems — all explained visually.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type book">Book</div>
+            <h4>The Pragmatic Programmer</h4>
+            <p>Not about code, but about thinking about code. Every developer should read this before their first job.</p>
+            <div class="res-footer"><span class="res-level beginner">All Levels</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type course">Course</div>
+            <h4>MIT 6.006 — Introduction to Algorithms</h4>
+            <p>Full MIT course on algorithms and data structures, free on OpenCourseWare. Problem sets included.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESIGN -->
+      <div class="res-tab-content" id="tab-design">
+        <div class="res-grid">
+          <div class="res-card">
+            <div class="res-type course">Course</div>
+            <h4>Google UX Design Certificate</h4>
+            <p>End-to-end UX process — research, wireframing, prototyping, usability testing. Portfolio-ready projects.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type platform">Platform</div>
+            <h4>Figma — Design Tool</h4>
+            <p>The industry standard. Free for students. Learn components, auto-layout, variables, and prototyping.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type book">Book</div>
+            <h4>Refactoring UI</h4>
+            <p>By the Tailwind CSS creators. Practical design tips for developers — spacing, typography, color, layout.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type video">Video</div>
+            <h4>DesignCode — UI & Motion</h4>
+            <p>Beautiful tutorials on designing and prototyping in Figma and coding the designs in React and SwiftUI.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAREER -->
+      <div class="res-tab-content" id="tab-career">
+        <div class="res-grid">
+          <div class="res-card">
+            <div class="res-type tutorial">Guide</div>
+            <h4>How to Cold Email for Internships</h4>
+            <p>The NexusHub playbook on reaching out to engineers and founders. Templates, timing, and follow-up strategy.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type book">Book</div>
+            <h4>Cracking the Coding Interview</h4>
+            <p>The classic interview prep book. 189 problems with detailed solutions. Essential for placement season.</p>
+            <div class="res-footer"><span class="res-level intermediate">Intermediate</span><span class="res-paid">Paid</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type platform">Platform</div>
+            <h4>LinkedIn — Student Profile Guide</h4>
+            <p>How to craft a LinkedIn profile that gets recruiter messages. Headline, about section, skills, and projects.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+          <div class="res-card">
+            <div class="res-type tutorial">Guide</div>
+            <h4>Building in Public — NexusHub Blog</h4>
+            <p>Why sharing your work online accelerates your career. How to tweet your projects without the cringe.</p>
+            <div class="res-footer"><span class="res-level beginner">Beginner</span><span class="res-free">Free</span><a href="#" class="res-link">Open →</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTRIBUTE CTA -->
+  <section class="res-contribute">
+    <div class="container res-contribute-inner">
+      <div>
+        <h3>Know a great resource?</h3>
+        <p>We're always adding to the hub. Submit a resource and help your fellow members level up.</p>
+      </div>
+      <a href="index.html#contact" class="btn-primary">Suggest a Resource</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">NEXUS<span>HUB</span></div>
+        <p>Built by students, for students.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">GitHub</a>
+          <a href="#" class="footer-social-btn">LinkedIn</a>
+          <a href="#" class="footer-social-btn">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#events">Events</a>
+        <a href="index.html#team">Team</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <a href="resources.html">Learning Hub</a>
+        <a href="projects.html">Project Gallery</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NexusHub. All rights reserved.</p>
+      <p>Made with ♥ by the NexusHub team</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function showTab(id, btn) {
+      document.querySelectorAll('.res-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.res-tab-content').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + id).classList.add('active');
+    }
+
+    function searchResources() {
+      const q = document.getElementById('res-search').value.toLowerCase();
+      document.querySelectorAll('.res-card').forEach(card => {
+        const text = (card.textContent + (card.dataset.search || '')).toLowerCase();
+        card.style.display = text.includes(q) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
