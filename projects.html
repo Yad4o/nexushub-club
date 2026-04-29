@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — NexusHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <div id="custom-cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">NEXUS<span>HUB</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects" class="nav-active">Projects</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#tech">Tech</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Join Us</a>
+      <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <div class="section-label">Built by NexusHub</div>
+      <h1>Project <span>Gallery</span></h1>
+      <p>From hackathon winners to production deployments — here's everything we've shipped.</p>
+    </div>
+    <div class="page-hero-stats">
+      <div class="ph-stat"><span data-count="15" data-suffix="+">0+</span><p>Projects</p></div>
+      <div class="ph-stat"><span data-count="3" data-suffix="">0</span><p>Hackathon Wins</p></div>
+      <div class="ph-stat"><span data-count="2000" data-suffix="+">0+</span><p>GitHub Stars</p></div>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="projects-page-section">
+    <div class="container">
+      <div class="page-filters">
+        <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+        <button class="filter-btn" onclick="filterProjects('ai',this)">AI / ML</button>
+        <button class="filter-btn" onclick="filterProjects('web',this)">Web</button>
+        <button class="filter-btn" onclick="filterProjects('mobile',this)">Mobile</button>
+        <button class="filter-btn" onclick="filterProjects('tool',this)">Tools</button>
+      </div>
+
+      <div class="projects-full-grid">
+
+        <!-- AI/ML -->
+        <div class="project-card-full" data-tag="ai">
+          <div class="pcf-visual pv1">
+            <div class="project-tag">AI / ML</div>
+            <div class="pcf-win">🏆 SIH 2025 Winner</div>
+          </div>
+          <div class="pcf-body">
+            <h3>VisionGrade</h3>
+            <p>Automated assignment grading using computer vision and OCR. Teachers upload scanned answer sheets; the model extracts handwriting, matches keywords, and scores each answer. Reduces grading time by 70% with 94% accuracy on benchmark datasets.</p>
+            <div class="project-tech"><span>PyTorch</span><span>OpenCV</span><span>Tesseract OCR</span><span>Flask</span><span>PostgreSQL</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Team of 4</span>
+                <span>📅 Jan 2025</span>
+                <span>⭐ 340 GitHub stars</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+                <a href="#" class="btn-primary small-btn">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card-full" data-tag="ai">
+          <div class="pcf-visual pv3">
+            <div class="project-tag">AI / ML</div>
+          </div>
+          <div class="pcf-body">
+            <h3>SentimentScan</h3>
+            <p>Real-time social media sentiment analysis pipeline. Ingests tweets and Reddit posts, runs BERT classification, and surfaces live trend dashboards with topic clustering and emotional arc visualization over time.</p>
+            <div class="project-tech"><span>Python</span><span>BERT</span><span>FastAPI</span><span>React</span><span>Redis</span><span>Kafka</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Team of 3</span>
+                <span>📅 Oct 2024</span>
+                <span>⭐ 210 GitHub stars</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+                <a href="#" class="btn-primary small-btn">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card-full" data-tag="ai">
+          <div class="pcf-visual pv4">
+            <div class="project-tag">AI / ML</div>
+          </div>
+          <div class="pcf-body">
+            <h3>ActionWatch</h3>
+            <p>Human action recognition system using CNN + LSTM trained on UCF-101. Detects 101 activity classes from webcam or video input. Achieves 89% top-5 accuracy. Built as a safety monitoring prototype for labs.</p>
+            <div class="project-tech"><span>PyTorch</span><span>OpenCV</span><span>LSTM</span><span>Streamlit</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Team of 2</span>
+                <span>📅 Sep 2024</span>
+                <span>⭐ 95 GitHub stars</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEB -->
+        <div class="project-card-full" data-tag="web">
+          <div class="pcf-visual pv2">
+            <div class="project-tag">Web</div>
+            <div class="pcf-win">🚀 500+ Users</div>
+          </div>
+          <div class="pcf-body">
+            <h3>CampusConnect</h3>
+            <p>Full-stack platform connecting students with internships, study groups, and campus events. Features real-time chat, event RSVP, a job board, and a peer mentorship matching algorithm. Currently serving 500+ active users.</p>
+            <div class="project-tech"><span>Next.js</span><span>Node.js</span><span>MongoDB</span><span>Socket.io</span><span>AWS S3</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Team of 5</span>
+                <span>📅 Dec 2024</span>
+                <span>⭐ 420 GitHub stars</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+                <a href="#" class="btn-primary small-btn">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card-full" data-tag="web">
+          <div class="pcf-visual pv5">
+            <div class="project-tag">Web</div>
+          </div>
+          <div class="pcf-body">
+            <h3>DevPortfolio Generator</h3>
+            <p>One-click portfolio site generator. Connect your GitHub, answer 5 questions, and get a production-ready dark-theme portfolio with live stats, project cards, and a contact form — deployed to Vercel in under 60 seconds.</p>
+            <div class="project-tech"><span>Vue.js</span><span>GitHub API</span><span>Tailwind</span><span>Vercel CLI</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Team of 2</span>
+                <span>📅 Feb 2025</span>
+                <span>⭐ 185 GitHub stars</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+                <a href="#" class="btn-primary small-btn">Try It</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE -->
+        <div class="project-card-full" data-tag="mobile">
+          <div class="pcf-visual pv6">
+            <div class="project-tag">Mobile</div>
+          </div>
+          <div class="pcf-body">
+            <h3>AttendEase</h3>
+            <p>Smart attendance system using on-device face recognition via TensorFlow Lite. Students simply face the camera; the system marks attendance and notifies faculty. Deployed across 3 departments with 98% accuracy in real conditions.</p>
+            <div class="project-tech"><span>Flutter</span><span>TensorFlow Lite</span><span>FastAPI</span><span>Firebase</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Team of 4</span>
+                <span>📅 Mar 2025</span>
+                <span>🏫 3 Departments</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card-full" data-tag="mobile">
+          <div class="pcf-visual pv1" style="background:linear-gradient(135deg,#1a2d0a,#3d6b1d)">
+            <div class="project-tag">Mobile</div>
+          </div>
+          <div class="pcf-body">
+            <h3>StudyBuddy</h3>
+            <p>AI-powered study companion for students. Features GPT-powered smart flashcards that adapt to your weak areas, a pomodoro timer with focus analytics, and collaborative live study rooms with built-in whiteboard.</p>
+            <div class="project-tech"><span>React Native</span><span>Firebase</span><span>OpenAI API</span><span>WebRTC</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Team of 3</span>
+                <span>📅 Jan 2025</span>
+                <span>⭐ 130 GitHub stars</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+                <a href="#" class="btn-primary small-btn">TestFlight</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="project-card-full" data-tag="tool">
+          <div class="pcf-visual" style="background:linear-gradient(135deg,#1a1a0a,#5f5b1d)">
+            <div class="project-tag">Tool</div>
+          </div>
+          <div class="pcf-body">
+            <h3>Text Autocomplete Engine</h3>
+            <p>High-performance trie-based autocomplete built in C++. Supports prefix queries with frequency-ranked suggestions, fuzzy matching, and a Python FastAPI wrapper. Benchmarked at under 2ms P99 for 1M word dictionary.</p>
+            <div class="project-tech"><span>C++</span><span>FastAPI</span><span>Python</span><span>CMake</span></div>
+            <div class="pcf-footer">
+              <div class="pcf-meta">
+                <span>👥 Solo</span>
+                <span>📅 Nov 2024</span>
+                <span>⭐ 72 GitHub stars</span>
+              </div>
+              <div class="pcf-links">
+                <a href="#" class="btn-secondary small-btn">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SUBMIT PROJECT CTA -->
+      <div class="submit-project-cta">
+        <div>
+          <h3>Built something cool?</h3>
+          <p>Submit your project to be featured in the NexusHub gallery.</p>
+        </div>
+        <a href="index.html#contact" class="btn-primary">Submit Your Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">NEXUS<span>HUB</span></div>
+        <p>Built by students, for students.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">GitHub</a>
+          <a href="#" class="footer-social-btn">LinkedIn</a>
+          <a href="#" class="footer-social-btn">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#events">Events</a>
+        <a href="index.html#team">Team</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Learning Hub</a>
+        <a href="projects.html">Project Gallery</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NexusHub. All rights reserved.</p>
+      <p>Made with ♥ by the NexusHub team</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
