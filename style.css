@@ -14,10 +14,11 @@
 
 html { scroll-behavior: smooth; scrollbar-width: none; }
 html::-webkit-scrollbar { display: none; }
-body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; scrollbar-width: none; }
+body::-webkit-scrollbar { display: none; }
 
-/* SCROLL PROGRESS */
-#scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2)); z-index: 9999; width: 0; transition: width 0.1s linear; }
+/* SCROLL PROGRESS - hidden */
+#scroll-progress { display: none; }
 
 /* CUSTOM CURSOR */
 #custom-cursor { position: fixed; width: 36px; height: 36px; border: 1.5px solid rgba(108,99,255,0.6); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, border-color 0.2s; }
