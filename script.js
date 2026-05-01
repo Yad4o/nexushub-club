@@ -14,6 +14,12 @@ function toggleTheme() {
   }
 })();
 
+// ── BACK TO TOP ──────────────────────────────────────────────────
+const backToTopBtn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (backToTopBtn) backToTopBtn.classList.toggle('visible', window.scrollY > 300);
+});
+
 // ── SCROLL PROGRESS ─────────────────────────────────────────────
 const progressBar = document.getElementById('scroll-progress');
 window.addEventListener('scroll', () => {
