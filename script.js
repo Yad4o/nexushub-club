@@ -1,3 +1,20 @@
+// ── COOKIE CONSENT ───────────────────────────────────────────────
+(function initCookieBanner() {
+  if (!localStorage.getItem('nexus-cookie-ok')) {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) setTimeout(() => banner.classList.add('show'), 1800);
+  }
+})();
+function acceptCookies() {
+  localStorage.setItem('nexus-cookie-ok', '1');
+  const b = document.getElementById('cookie-banner');
+  if (b) { b.classList.remove('show'); }
+}
+function dismissCookies() {
+  const b = document.getElementById('cookie-banner');
+  if (b) b.classList.remove('show');
+}
+
 // ── THEME TOGGLE ─────────────────────────────────────────────────
 function toggleTheme() {
   document.body.classList.toggle('light-mode');

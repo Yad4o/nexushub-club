@@ -15,6 +15,15 @@
   <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
   <div id="toast-container"></div>
 
+  <!-- COOKIE CONSENT -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By continuing, you agree to our use of cookies.</p>
+    <div class="cookie-actions">
+      <button onclick="acceptCookies()" class="btn-primary" style="padding:8px 20px;font-size:13px">Accept</button>
+      <button onclick="dismissCookies()" class="cookie-dismiss">Dismiss</button>
+    </div>
+  </div>
+
   <!-- PRELOADER -->
   <div id="preloader">
     <div class="preloader-inner">
