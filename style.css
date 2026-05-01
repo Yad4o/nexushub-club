@@ -26,6 +26,16 @@ body.light-mode {
 .theme-toggle { background: none; border: 1.5px solid var(--border); color: var(--text); font-size: 18px; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; margin-right: 8px; }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
+/* PRELOADER */
+#preloader { position: fixed; inset: 0; background: var(--bg); z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease, visibility 0.5s ease; }
+#preloader.hidden { opacity: 0; visibility: hidden; }
+.preloader-inner { text-align: center; }
+.preloader-logo { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: var(--text); letter-spacing: 0.05em; margin-bottom: 24px; }
+.preloader-logo span { color: var(--accent); }
+.preloader-bar { width: 200px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.preloader-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; animation: preload 1.2s ease forwards; }
+@keyframes preload { 0% { width: 0; } 70% { width: 85%; } 100% { width: 100%; } }
+
 /* BACK TO TOP */
 #back-to-top { position: fixed; bottom: 32px; right: 32px; width: 44px; height: 44px; background: var(--accent); color: #fff; border: none; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(20px); transition: opacity 0.3s, transform 0.3s; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(108,99,255,0.4); }
 #back-to-top.visible { opacity: 1; transform: translateY(0); }

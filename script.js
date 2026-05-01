@@ -14,6 +14,12 @@ function toggleTheme() {
   }
 })();
 
+// ── PRELOADER ────────────────────────────────────────────────────
+window.addEventListener('load', () => {
+  const pre = document.getElementById('preloader');
+  if (pre) setTimeout(() => pre.classList.add('hidden'), 1400);
+});
+
 // ── BACK TO TOP ──────────────────────────────────────────────────
 const backToTopBtn = document.getElementById('back-to-top');
 window.addEventListener('scroll', () => {
