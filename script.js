@@ -211,6 +211,14 @@ function handleSubmit(e) {
   document.getElementById('form-success').style.display = 'block';
 }
 
+// ── FAQ ACCORDION ────────────────────────────────────────────────
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
 // ── COUNTDOWN TIMER ──────────────────────────────────────────────
 (function startCountdown() {
   const target = new Date('2025-06-15T09:00:00').getTime();
