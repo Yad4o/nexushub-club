@@ -204,11 +204,26 @@ function filterProjects(tag, btn) {
   });
 }
 
+// ── TOAST NOTIFICATIONS ──────────────────────────────────────────
+function showToast(msg, type = 'success', duration = 3500) {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${type}`;
+  toast.innerHTML = `<span class="toast-icon">${type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️'}</span><span>${msg}</span>`;
+  container.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('toast-visible'));
+  setTimeout(() => {
+    toast.classList.remove('toast-visible');
+    setTimeout(() => toast.remove(), 400);
+  }, duration);
+}
+
 // ── CONTACT FORM ─────────────────────────────────────────────────
 function handleSubmit(e) {
   e.preventDefault();
-  document.querySelector('.contact-form').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+  showToast('Application received! We\'ll be in touch soon.', 'success');
+  e.target.reset();
 }
 
 // ── FAQ ACCORDION ────────────────────────────────────────────────
@@ -243,5 +258,6 @@ function toggleFaq(btn) {
 // ── NEWSLETTER ───────────────────────────────────────────────────
 function handleNewsletter(e) {
   e.preventDefault();
-  e.target.innerHTML = '<p style="color:#4ade80;font-size:15px;padding:12px 0">✅ You\'re subscribed!</p>';
+  showToast('You\'re subscribed! Watch your inbox for updates.', 'success');
+  e.target.reset();
 }
