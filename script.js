@@ -1,3 +1,19 @@
+// ── THEME TOGGLE ─────────────────────────────────────────────────
+function toggleTheme() {
+  document.body.classList.toggle('light-mode');
+  const btn = document.getElementById('themeToggle');
+  const isLight = document.body.classList.contains('light-mode');
+  if (btn) btn.innerHTML = isLight ? '&#9790;' : '&#9788;';
+  localStorage.setItem('nexus-theme', isLight ? 'light' : 'dark');
+}
+(function initTheme() {
+  if (localStorage.getItem('nexus-theme') === 'light') {
+    document.body.classList.add('light-mode');
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.innerHTML = '&#9790;';
+  }
+})();
+
 // ── SCROLL PROGRESS ─────────────────────────────────────────────
 const progressBar = document.getElementById('scroll-progress');
 window.addEventListener('scroll', () => {
