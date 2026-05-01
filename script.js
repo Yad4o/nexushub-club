@@ -211,6 +211,27 @@ function handleSubmit(e) {
   document.getElementById('form-success').style.display = 'block';
 }
 
+// ── COUNTDOWN TIMER ──────────────────────────────────────────────
+(function startCountdown() {
+  const target = new Date('2025-06-15T09:00:00').getTime();
+  const tick = () => {
+    const now = Date.now();
+    const diff = target - now;
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '00'; });
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2,'0'); };
+    set('cd-days', d); set('cd-hours', h); set('cd-mins', m); set('cd-secs', s);
+  };
+  tick();
+  setInterval(tick, 1000);
+})();
+
 // ── NEWSLETTER ───────────────────────────────────────────────────
 function handleNewsletter(e) {
   e.preventDefault();
